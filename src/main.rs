@@ -143,7 +143,11 @@ fn main() {
 
     // This should look familiar. It turns out that two classic C++ bugs, failure to cope with self-assignment, and using invalidated iterators are the same underlying kind of bug. In both cases, code assumes it's modifying one value while consulting another, when in fact they're both the same value. By requiring mutable access to be exclusive, Rust has fended off a wide class of everyday mistakes.
 
-    // The immiscibility of shared and mutable refs really demonstrates its value when writing concurrent code. A data race is possible only when some value is both mutable and shared between threads, which is exactly what Rust's reference rules eliminate. A concurrent Rust program that avoids unsafe code is free of data races by construction (covered in Chapter 19). In summary, concurrency is much easier to use in Rust than in most other languages.
+    // The immiscibility of shared and mutable refs really demonstrates its value when writing concurrent code. A data race is possible only when some value is both mutable and shared between threads, which is exactly what Rust's reference rules eliminate. A concurrent Rust program that avoids unsafe code is free of data races by construction (covered in Chapter 19). In summary, concurrency is much easier to use in Rust than in most other languages. See page 193 for Rust vs C's pointers to const.
+
+
+
+    
 
 
 
